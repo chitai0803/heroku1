@@ -14,7 +14,7 @@ if(isset($_GET['search'])){
 }else{
     $key='';
 }
-    $sql="SELECT * FROM product WHERE item_brand LIKE'%$key%' AND item_name LIKE'%$key%'";
+    $sql="SELECT * FROM product WHERE item_brand LIKE'%$key%' OR item_name LIKE'%$key%'";
     $query_pro = mysqli_query($connect,$sql);
 ?>
     <h3>Product: <?php $_GET['key']?></h3>
