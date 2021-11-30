@@ -17,7 +17,7 @@ if(isset($_GET['search'])){
     $sql="SELECT * FROM product WHERE item_brand LIKE'%$key%' OR item_name LIKE'%$key%'";
     $query_pro = mysqli_query($connect,$sql);
 ?>
-    <h3>Product: <?php $_GET['key']?></h3>
+    <h3>Product: <?php echo $key?> <?php $_GET['key']?></h3>
 <div>
 <?php
         while($row = mysqli_fetch_array($query_pro)){

@@ -76,52 +76,16 @@
                 <!---    !product price       -->
 
                 <!--    #policy -->
-                <div id="policy">
-                    <div class="d-flex">
-                        <div class="return text-center mr-5">
-                            <div class="font-size-20 my-2 color-second">
-                                <span class="fas fa-retweet border p-3 rounded-pill"></span>
-                            </div>
-                            <a href="#" class="font-rale font-size-12">10 Days <br> Replacement</a>
-                        </div>
-                        <div class="return text-center mr-5">
-                            <div class="font-size-20 my-2 color-second">
-                                <span class="fas fa-truck  border p-3 rounded-pill"></span>
-                            </div>
-                            <a href="#" class="font-rale font-size-12">Daily Tuition <br>Deliverd</a>
-                        </div>
-                        <div class="return text-center mr-5">
-                            <div class="font-size-20 my-2 color-second">
-                                <span class="fas fa-check-double border p-3 rounded-pill"></span>
-                            </div>
-                            <a href="#" class="font-rale font-size-12">1 Year <br>Warranty</a>
-                        </div>
-                    </div>
-                </div>
+               
                 <!--    !policy -->
                 <hr>
 
                 <!-- order-details -->
-                <div id="order-details" class="font-rale d-flex flex-column text-dark">
-                    <small>Delivery by : Mar 29  - Apr 1</small>
-                    <small>Sold by <a href="#">Daily Electronics </a>(4.5 out of 5 | 18,198 ratings)</small>
-                    <small><i class="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Deliver to Customer - 424201</small>
-                </div>
+               
                 <!-- !order-details -->
 
                 <div class="row">
-                    <div class="col-6">
-                        <!-- color -->
-                        <div class="color my-3">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="font-baloo">Color:</h6>
-                                <div class="p-2 color-yellow-bg rounded-circle"><button class="btn font-size-14"></button></div>
-                                <div class="p-2 color-primary-bg rounded-circle"><button class="btn font-size-14"></button></div>
-                                <div class="p-2 color-second-bg rounded-circle"><button class="btn font-size-14"></button></div>
-                            </div>
-                        </div>
-                        <!-- !color -->
-                    </div>
+                   
                     <div class="col-6">
                         <!-- product qty section -->
                         <div class="qty d-flex">
@@ -134,24 +98,7 @@
                         </div>
                         <!-- !product qty section -->
                     </div>
-                </div>
-
-                <!-- size -->
-                <div class="size my-3">
-                    <h6 class="font-baloo">Size :</h6>
-                    <div class="d-flex justify-content-between w-75">
-                        <div class="font-rubik border p-2">
-                            <button class="btn p-0 font-size-14">4GB RAM</button>
-                        </div>
-                        <div class="font-rubik border p-2">
-                            <button class="btn p-0 font-size-14">6GB RAM</button>
-                        </div>
-                        <div class="font-rubik border p-2">
-                            <button class="btn p-0 font-size-14">8GB RAM</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- !size -->
+                </div>            
 
 
             </div>

@@ -32,7 +32,7 @@ if(!$connect){
                <thead class="thead-dark">
                     <tr>
                         <th>#</th>
-                        <th>Brand</th>
+                        <th>Type</th>
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Image</th>

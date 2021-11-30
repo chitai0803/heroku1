@@ -1,27 +1,25 @@
 <?php 
-    include './database/DBController.php';
 	$connect = mysqli_connect('localhost','root','mysql','shopee');
 	if(!$connect){
 		echo("Kết nối thất bại");
 	}
-    if(isset($_POST['sbm'])&& $_POST["item_brand"] && $_POST ["item_name"] && $_POST["item_price"] && $_POST["item_img"]&& $_POST["item_register"]){
-        $item_brand = $_POST['item_brand'];
-        $item_name = $_POST['item_name'];
-        $item_price = $_POST['item_price'];
-        $item_register = $_POST['item_register'];
-// Getting the image from the field
-        $item_image  = $_FILES['item_image']['name'];
-   $tiem_image_tmp = $_FILES['item_image']['tmp_name'];     
+if(isset($_POST['insert_post'])){
+	$item_id=$_POST['item_id']&& $_POST['item_id'==''];
+   $item_brand = $_POST['item_brand'];
+   $item_name = $_POST['item_name'];
+   $item_price = $_POST['item_price'];
+   $item_register = $_POST['item_register'];  
    
+   // Getting the image from the field
+ 
+	$item_image  = $_FILES['item_image']['name'];
 
-//    $sql = "INSERT into product (item_brand,item_name,item_price,item_image,item_register)
-//    values ('$item_brand','$item_name','$item_price','$item_image','$item_register')";
-//    $query = mysqli_query($connect,$sql);
-   move_uploaded_file($item_image_tmp,'./products/'.$item_image);
-   header('location:category.php');
-    // }
-
-    $sql = " INSERT INTO product values ('$item_brand','$item_name','$item_price','$item_image','$item_register') ";
+   $item_image_tmp = $_FILES['item_image']['tmp_name'];
+     
+   move_uploaded_file($item_image_tmp,"./assets/products/$item_image");
+  
+   
+   $sql = "INSERT INTO product VALUES (null,'$item_brand','$item_name','$item_price','$item_image','$item_register')";
 
    $insert_pro = mysqli_query($connect, $sql);
    
@@ -30,25 +28,31 @@
 	
 	echo "<script>window.open('index.php','_self')</script>";
    }
-   else echo " fall";
+   else echo "<script>alert('fail')</script>";
    }
-    
+   
 ?>
 <div class="container-fulid">
     <div clas="card">
         <div class="card-header">
-            <h2>Add Product</h2>
+            <a href="index.php"><h2>Add Product</h2></a>
         </div>
         <div class="card-body">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form method="POST" enctype="multipart/form-data">
+                
+            <div class="form-group">
+                    <label for="">Product ID</label>
+                    <input type="int" name="item_id" class="form-control">
+                </div>
+            
                 <div class="form-group">
-                    <label for="">Product Brand</label>
-                    <input type="text" name="item_brand" class="form-control">
+                    <label for="">Product Type</label>                    
+                    <input type="text" name="item_brand" class="form-control ">              
                 </div>
 
                 <div class="form-group">
                     <label for="">Product Name</label>
-                    <input type="text" name="item_name" class="form-control">
+                    <input type="text" name="item_name" class="form-control ">
                 </div>
 
                 <div class="form-group">
@@ -62,11 +66,11 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="">Product Date</label>
-                    <input type="text" name="item_register" class="form-control">
+                    <label for="">Product Description</label>
+                    <input type="textarea" name="item_register" class="form-control">
                 </div>
-
-                <button name="sbm" class="btn btn-success" type="submit">Add</button>
+                
+                <button type="submit" name="insert_post" class="btn btn-success" type="submit">Add Product</button>
             </form>
         </div>
     </div>
@@ -78,4 +82,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom CSS file -->
+  <link rel="stylesheet" href="style.css">
 </div>

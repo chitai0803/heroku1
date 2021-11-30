@@ -18,7 +18,7 @@
 	   <table align="center" width="100%">	     
 		 <tr>
 		   <td colspan="7">
-		   <h2>Add Product</h2>
+		   <a href="index.php"><h2>Add Product</h2></a>
 		   <div class="border_bottom"></div><!--/.border_bottom -->
 		   </td>
 		 </tr>
@@ -29,7 +29,7 @@
 		 </tr>
 
 		 <tr>
-		   <td><b>Product Brand:</b></td>
+		   <td><b>Product Type:</b></td>
 		   <td><input type="text" name="item_brand" class="input"></td>
 		 </tr>
 
