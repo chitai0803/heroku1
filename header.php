@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANT Shop</title>
+    <title>Mobile Shopee</title>
     
 
     <!-- Bootstrap CDN -->
@@ -38,7 +38,7 @@
 
     <!-- Primary Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark color-second-bg">
-        <a class="navbar-brand" href="index.php">ANT Shop</a>
+        <a class="navbar-brand" href="index.php">Mobile Shopee</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -63,6 +63,12 @@
                     <a class="nav-link" href="#">Coming Soon</a>
                 </li>
             </ul>
+                    <div class="search-container" method="GET">
+                        <form action="search.php">
+                        <input type="text" class="search" placeholder="Search.." name="key">
+                        <button type="submit" name="search" value="search" ><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
             <form action="#" class="font-size-14 font-rale">
                 <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
                     <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
